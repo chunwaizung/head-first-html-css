@@ -1,5 +1,8 @@
-h1, h2 {
+body {
 	font-family: sans-serif;
+}
+
+h1, h2 {
 	color: gray;
 }
 
@@ -7,6 +10,11 @@ h1 {
 	border-bottom: 1px solid red;
 }
 
-p {
+p { /*可以为同一个元素设置多个css样式*/
 	color: maroon;
+}
+
+/*通过重新定义一个样式规则，覆盖从body继承而来的字体样式*/
+em {
+	font-family: serif;
 }
