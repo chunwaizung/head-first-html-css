@@ -1,0 +1,56 @@
+body {
+	font-family: sans-serif;
+	/*定制元素使用的字体*/
+	/*serif(有衬线) 
+	sans-serif(无衬线) 
+	monospace(等宽) 
+	cursive(手写) 
+	fantasy（特殊）*/
+
+	font-size: 14px;/*控制元素字体的大小*/
+	color: silver;/*为文本设置颜色*/
+	font-weight: bold;/*改变字体的粗细（lighter\normal\bold\bolder）*/
+	text-decoration: underline;/*为文本增加更多的风格，加一些装饰（none\underline\overline\line-through）*/
+}
+
+h1, h2 {
+	color: gray;
+}
+
+h1 {
+	border-bottom: 1px solid red;
+}
+
+p { /*可以为同一个元素设置多个css样式*/
+	color: maroon;
+}
+
+/*通过重新定义一个样式规则，覆盖从body继承而来的字体样式*/
+em {
+	/*另一种设定方法*/
+	font-family: Verdana, Arial, sans-serif;/*使用font-family属性可以指定多个字体。最后总是放一个通用的字体系列号*/
+	/*查看用户计算机上是否有Verdana字体，如果有，这个元素就会使用这个字体。如果没有，转到下一个顺位的字体（Arial），以此类推*/
+}
+
+p.test {
+	/*如果一个字体名包含多个单词，或是中文，加上双引号*/
+	font-family: "宋体";
+	font-family: "Courier New";
+}
+
+img {
+	display: block;
+}
+
+/*p.raspberry p.blueberry p.greentea 的特定程度一样，就会利用样式表文件中规则的顺序来解决问题。也就是说，要使用css文件中最后列出的规则。*/
+p.raspberry {
+	color: blue;
+}
+
+p.blueberry {
+	color: purple;
+}
+
+p.greentea {
+	color: green;
+}
