@@ -18,3 +18,20 @@ p { /*可以为同一个元素设置多个css样式*/
 em {
 	font-family: serif;
 }
+
+
+p.raspberry {
+	color: blue;
+}
+
+p.blueberry {
+	color: purple;
+}
+
+img {
+	display: block;
+}
+
+p.greentea {
+	color: green;
+}
