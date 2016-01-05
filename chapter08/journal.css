@@ -1,0 +1,13 @@
+/*与正常的规则不同，正常规则会选择一组元素并指定样式，而@font-face规则会建立一个字体，将指定一个font-family名，以便以后使用*/
+@font-face {
+	font-family: "Emblema One";
+	src: url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.woff"),
+		 url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.tff");
+		/*src属性告诉浏览器在哪里可以得到这个字体。对于浏览器可识别的每一个文件，我们要分别指定一个src值。*/
+		/*浏览器会尝试加载每一个src文件，直到找到它能支持的一个文件。一旦家在，会为这个字体分配font-family属性中指定的名字*/
+}
+
+body {
+	/*一旦用@font-face在浏览器中加载一个字体，就能在其它的font-family中使用这个字体*/
+	font-family:"Emblema One", Verdana, Arial, sans-serif;
+}
