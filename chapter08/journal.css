@@ -10,4 +10,68 @@
 body {
 	/*一旦用@font-face在浏览器中加载一个字体，就能在其它的font-family中使用这个字体*/
 	font-family:"Emblema One", Verdana, Arial, sans-serif;
+	font-size: small;/*如果在body中使用百分比设定字体大小，将以默认的字体大小为参考*/
+}
+
+h1, h2 {
+	color: #c60;/*#cc6600,颜色分量的两位相同时，可以缩写*/
+	border-bottom: thin dotted #888888;
+}
+
+h1 {
+	font-size: 2.2em;
+}
+
+h2 {
+	font-size: 130%;/*相对于父元素的字体大小*/
+	font-weight: normal;/*字重有lighter、normal、bold、bloder几种，lighter和bloder通常都没什么卵用*/
+}
+
+h3 {
+	font-size:1.2em;/*相对于父元素的字体大小，比例因子em，1.2em表示是父元素的1.2倍*/
+}
+
+h4 {
+	font-size: small;/*使用关键字也可以*/
+	/* 
+	***可选的关键字***
+	xx-small
+	x-small
+	small
+	medium
+	large
+	x-large
+	xx-large
+	*/
+
+	/*可以先为body设置一个默认字体（关键字法），其它元素使用百分比或em设置*/
+}
+
+blockquote {
+	font-style: italic;/*italic和oblique可以任选一种，这两种风格看起来差不多，不要在意这些细节*/
+	/*为什么我们不推荐使用<em>来设置斜体：
+	<em>的样式可能会变，没准哪天就不是斜体了
+	*/
+	font-size: 1.7em;
+}
+
+body {
+	background-color: silver;/*按名指定颜色。不区分大小写*/
+}
+
+h5 {
+	background-color: rgb(80%, 40%, 5%);/*按rgb值（数值（0-255）或百分比）指定颜色*/
+	
+}
+
+h6 {
+	background-color: #cc6600;/*使用十六进制码指定颜色，每组的两个数字分别代表红绿蓝的分量*/
+}
+
+q {
+	text-decoration: line-through underline;/*可以一次设置多个装饰，中间一个空格*/
+}
+
+h3 {
+	text-decoration: none;/*如果不想用继承来的装饰，可以用none把继承的装饰沉默了*/
 }
