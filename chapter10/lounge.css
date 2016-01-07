@@ -26,10 +26,6 @@ em {
 	font-family: serif;
 }
 
-img {
-	display: block;
-}
-
 span.italic {
 	font-style: italic;
 }
@@ -84,14 +80,59 @@ ul {
 	}
 }
 
+div#elixirs {
+	width: 200px;/*一个块元素的默认宽度是auto，说明它会延伸占满可用的空间*/
+	padding: 20px;
+	padding-top: 0px;
+	margin-left: 20px;
+	text-align: center;/*text-align会对块元素中的所有内联内容对齐，只能是块元素，内联元素直接设定不起作用*//*此例中的文本之所以在块元素中也能对齐，是因为他们所在的块元素继承了div父类的特性*/
+	border: 5px dashed black;
+	border-radius: 5px;
+	background:url(images/cocktail.gif) repeat-x;/*background的image和重复方式可以写在同一行，类似border、padding的快捷方式*/
+	line-height: 1;/*使用数字1设定行高，子元素的行高将会是自身字体大小的1倍，而不是父元素字体大小的1倍*/
+	float: right;
+}
 
+#elixirs>h3 { /*#elixirs>h3 这种写法只会选择ID为"elixirs"的元素的直接孩子<h2>，而不会选择元素内所有的<h2>*/
+	color: #d12c47;
+}
 
+#elixirs h2 {
+	color: black;
+}
 
+div#footer {
+	font-size: 80%;
+	text-align: center;
+	line-height: normal;
+	margin-top: 30px;
+}
 
+span.cd {
+	font-style: italic;
+}
 
+span.artist {
+	font-weight: bold;
+}
 
+/*以下为伪类(Pseudo-class)
+伪类：
+你可以对伪类指定样式
+但是没有人在html中真正输入这些类
+*/
+#elixirs a:link {
+	color: #007e7e;
+}
 
+#elixirs a:visited {
+	color: #333;
+}
 
+#elixirs a:hover {
+	background: #f88396;
+	color: #0d5353;
+}
 
 
 
