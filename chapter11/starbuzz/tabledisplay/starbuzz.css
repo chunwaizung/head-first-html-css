@@ -77,3 +77,24 @@ a:visited {
 #tableRow {
   display: table-row;/*css表格行*/
 }
+
+#headerSlogan {
+  float: right;
+}
+
+#award {
+  position: absolute;
+  top: 30px;
+  left: 365px;
+}
+
+#coupon {
+  position: fixed;
+  top: 350px;
+  left: -90px;
+}
+
+#coupon a, img {
+  border: none;/*css中有一条规则，要求关闭text-decoration，而使用边框来建立链接的下划线。这里会覆盖对应coupon<div>中链接的规则，指出外面不希望这个链接上有任何边框。*/
+  /*ps:这是什么意思？*/
+}
