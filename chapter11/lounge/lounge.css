@@ -1,0 +1,154 @@
+body {
+	font-size: small;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	line-height: 1.6em;
+}
+
+h1, h2 {
+	color: #007e7e;
+}
+
+h1 {
+	font-size: 150%;
+}
+
+h2 {
+	font-size: 130%;
+}
+
+p { /*可以为同一个元素设置多个css样式*/
+	color: maroon;
+}
+
+/*通过重新定义一个样式规则，覆盖从body继承而来的字体样式*/
+em {
+	font-family: serif;
+}
+
+span.italic {
+	font-style: italic;
+}
+
+h3 {
+	color: silver;
+}
+
+ul {
+	margin: 10px;
+	padding-left: 30px;
+}
+
+#guarantee {
+	/*关于边框：*/
+	border-color: white;
+	border-width: 1px;/*边框宽度可以使用关键字（thin,medium,thick）或者像素*/
+	border-style: dashed;
+	/*还可以指定任意一边的边框，就像边距*/
+	border-top-color: #a7c1c1;
+
+	/*边框圆角*/
+	border-radius: 15px;/*指定4个角的圆觉度数*/
+	border-top-left-radius: 170px; /*或这样单独指定一个角*/
+
+	background-color: #a7cece;
+	padding:25px;
+	padding-left: 80px;
+	margin:30px;
+	margin-right: 270px;
+	line-height: 1.9em;
+	font-style: italic;
+	color: #444;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background-image: url(images/background.gif);/*设定一个元素的背景图像。url两边不需要加引号*/
+	background-repeat: no-repeat;/*控制background-image是否重复显示，默认为会重复*/
+	/*
+	background-repeat: repeat-x; 水平方向重复
+	background-repeat: repeat-y;竖直方向重复
+	background-repeat: repeat;默认，重复
+	background-repeat: no-repeat;不重复
+	background-repeat: inherit;继承父元素的设置
+	*/
+	background-position: top left;/*background-position属性会设置图像的位置。可以按像素指定，也可以指定为一个百分数。或者使用关键字。如top,left,right,bottom,center*/
+}
+
+/*也可以直接在css中设定特定的设备才适用大括号里的css规则*/
+@media screen and (max-device-width:480px) {
+	p {
+		/*blablabla*/
+	}
+}
+
+div#elixirs {
+	width: 200px;/*一个块元素的默认宽度是auto，说明它会延伸占满可用的空间*/
+	padding: 20px;
+	padding-top: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;/*text-align会对块元素中的所有内联内容对齐，只能是块元素，内联元素直接设定不起作用*//*此例中的文本之所以在块元素中也能对齐，是因为他们所在的块元素继承了div父类的特性*/
+	border: 5px dashed black;
+	border-radius: 5px;
+	background:url(images/cocktail.gif) repeat-x;/*background的image和重复方式可以写在同一行，类似border、padding的快捷方式*/
+	line-height: 1;/*使用数字1设定行高，子元素的行高将会是自身字体大小的1倍，而不是父元素字体大小的1倍*/
+	float: right;/*浮动的元素必须有一个宽度*/
+}
+
+#elixirs>h3 { /*#elixirs>h3 这种写法只会选择ID为"elixirs"的元素的直接孩子<h2>，而不会选择元素内所有的<h2>*/
+	color: #d12c47;
+}
+
+#elixirs h2 {
+	color: black;
+}
+
+div#footer {
+	font-size: 80%;
+	text-align: center;
+	line-height: normal;
+	margin-top: 30px;
+}
+
+span.cd {
+	font-style: italic;
+}
+
+span.artist {
+	font-weight: bold;
+}
+
+/*以下为伪类(Pseudo-class)
+伪类：
+你可以对伪类指定样式
+但是没有人在html中真正输入这些类
+*/
+#elixirs a:link {
+	color: #007e7e;
+}
+
+#elixirs a:visited {
+	color: #333;
+}
+
+#elixirs a:hover {
+	background: #f88396;
+	color: #0d5353;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
