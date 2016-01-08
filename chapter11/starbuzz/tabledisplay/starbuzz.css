@@ -5,34 +5,35 @@ body {
   margin:           0px;
 }
 
-#allcontent {
-  width: 800px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #675c47;
-  margin: 0 auto;/*当设置为auto，浏览器会确定正确的外边距，另外还会确保左右是相等的，所以会居中*/
-}
-
 #header {
   background-color: #675c47;
   margin:           10px;
+  margin-bottom: 0px;/*css表格的边框不会和其它元素的外边距折叠。所以要特殊处理*/
   height:           108px;
 }
 
 #main {
+  display: table-cell;
   background:       #efe5d0 url(images/background.gif) top left;
   font-size:        105%;
   padding:          15px;
-  margin:           0px 330px 10px 10px;/*通过设置main区的右margin，让它等于右边栏的宽度，制造一个双栏的假象*/
+  vertical-align: top;/*确保表格两个单元格的所有内容相对于单元格上边对齐*/
 }
 
 #sidebar {
+  display: table-cell;
   background:       #efe5d0 url(images/background.gif) bottom right;
   font-size:        105%;
   padding:          15px;
-  margin:           0px 10px 10px 10px;
-  width: 280px;/*浮动必须要设定一个宽度*/
-  float: right;
+  vertical-align: top;
+}
+
+#drinks {
+  display: table-cell;
+  background: #efe5d0;
+  width: 20%;/*宽度为*/
+  padding: 15px;
+  vertical-align: top;
 }
 
 #footer {
@@ -41,8 +42,8 @@ body {
   text-align:       center;
   padding:          15px;
   margin:           10px;
+  margin-top: 0px;
   font-size:        90%;
-  clear: both;/*当元素流入页面时，在这个元素的左边，右边，或两边不允许有浮动内容*/
 }
 
 h1 {
@@ -66,4 +67,13 @@ a:visited {
   color:            #675c47;
   text-decoration:  none;
   border-bottom:    thin dotted #675c47;
+}
+
+#tableContainer {
+  display: table;/*css表格*/
+  border-spacing: 10px;/*为表格中增加10像素的边框间距，因为要使用单元格上的border-spacing，所以不再需要<div>上的外边距*/
+}
+
+#tableRow {
+  display: table-row;/*css表格行*/
 }

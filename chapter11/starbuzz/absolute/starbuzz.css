@@ -5,14 +5,6 @@ body {
   margin:           0px;
 }
 
-#allcontent {
-  width: 800px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #675c47;
-  margin: 0 auto;/*当设置为auto，浏览器会确定正确的外边距，另外还会确保左右是相等的，所以会居中*/
-}
-
 #header {
   background-color: #675c47;
   margin:           10px;
@@ -23,7 +15,8 @@ body {
   background:       #efe5d0 url(images/background.gif) top left;
   font-size:        105%;
   padding:          15px;
-  margin:           0px 330px 10px 10px;/*通过设置main区的右margin，让它等于右边栏的宽度，制造一个双栏的假象*/
+  margin:           0px 10px 10px 10px;
+  margin-right: 330px;
 }
 
 #sidebar {
@@ -31,8 +24,10 @@ body {
   font-size:        105%;
   padding:          15px;
   margin:           0px 10px 10px 10px;
-  width: 280px;/*浮动必须要设定一个宽度*/
-  float: right;
+  position:absolute;
+  top: 128px;
+  right: 0px;
+  width: 280px;
 }
 
 #footer {
@@ -42,7 +37,6 @@ body {
   padding:          15px;
   margin:           10px;
   font-size:        90%;
-  clear: both;/*当元素流入页面时，在这个元素的左边，右边，或两边不允许有浮动内容*/
 }
 
 h1 {
@@ -67,3 +61,29 @@ a:visited {
   text-decoration:  none;
   border-bottom:    thin dotted #675c47;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
