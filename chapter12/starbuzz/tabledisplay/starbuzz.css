@@ -5,14 +5,14 @@ body {
   margin:           0px;
 }
 
-header {
+header.top {
   background-color: #675c47;
   margin:           10px;
   margin-bottom: 0px;/*css表格的边框不会和其它元素的外边距折叠。所以要特殊处理*/
   height:           108px;
 }
 
-#main {
+section#main, section#blog {
   display: table-cell;
   background:       #efe5d0 url(images/background.gif) top left;
   font-size:        105%;
@@ -27,8 +27,7 @@ aside {
   padding:          15px;
   vertical-align: top;
 }
-
-#drinks {
+section#drinks {
   display: table-cell;
   background: #efe5d0;
   width: 20%;/*宽度为*/
@@ -98,3 +97,51 @@ a:visited {
   border: none;/*css中有一条规则，要求关闭text-decoration，而使用边框来建立链接的下划线。这里会覆盖对应coupon<div>中链接的规则，指出外面不希望这个链接上有任何边框。*/
   /*ps:这是什么意思？*/
 }
+
+nav {
+  background-color: #efe5d0;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+
+nav ul {
+  margin: 0px;/*默认情况下，如果没有明确设置为0，<ul>元素会有一个外边距，让<ul>元素稍微偏离*/
+  list-style-type: none;/*删除列表项的项目符号*/
+  padding: 5px 0px;
+}
+
+nav ul li {
+  display: inline;
+  padding: 5px 10px;
+}
+
+nav ul li a:link,nav ul li a:visited {
+  color: #954b4b;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+nav ul li.selected {
+  background-color: #c8b99c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
