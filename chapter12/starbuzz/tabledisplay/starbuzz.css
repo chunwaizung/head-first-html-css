@@ -5,7 +5,7 @@ body {
   margin:           0px;
 }
 
-#header {
+header {
   background-color: #675c47;
   margin:           10px;
   margin-bottom: 0px;/*css表格的边框不会和其它元素的外边距折叠。所以要特殊处理*/
@@ -20,7 +20,7 @@ body {
   vertical-align: top;/*确保表格两个单元格的所有内容相对于单元格上边对齐*/
 }
 
-#sidebar {
+aside {
   display: table-cell;
   background:       #efe5d0 url(images/background.gif) bottom right;
   font-size:        105%;
@@ -36,7 +36,7 @@ body {
   vertical-align: top;
 }
 
-#footer {
+footer {
   background-color: #675c47;
   color:            #efe5d0;
   text-align:       center;
