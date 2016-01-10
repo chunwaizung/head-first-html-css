@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <style type="text/css">
-      td, th { border: 1px solid black; }
+      td, th { border: thin solid black; padding: 3px;margin: 2px;}
+      table {border: 5px solid orange;}
     </style>
     <title>Testing Tony's Travels</title>
   </head>
   <body>
     <table>
+      <caption>The cities I visited on my Segway'n USA travels</caption> <!--表格标题-->
       <tr>
         <th>City</th> <!--<th>表示表头-->
-        <th>Date</th>
+        <th>Date</th><!--表头可以写在同一行，也可以写在每一行的第一个，看你需要-->
         <th>Temperature</th>
         <th>Altitude</th>
         <th>Population</th>
@@ -39,7 +41,7 @@
         <td>91</td>
         <td>4,226 ft</td>
         <td>41,173</td>
-        <td>4/5</td>
+        <td>4/5</td><!--即使有一行没有足够的元素，也要写上空的<tr></tr>-->
       </tr>
       <tr>
         <td>Last Chance,CO</td>
