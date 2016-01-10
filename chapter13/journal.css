@@ -23,3 +23,63 @@ blockquote {
   font-style:      italic;
 }
 
+table {
+  margin-left: 20px;
+  margin-right: 20px;
+  border: thin solid black;
+  caption-side: bottom;/*标题位置*/
+  border-spacing: 0px;/*html表格中各单元格中间的“外边距”*/
+  /*border-spacing: 10px 30px;*//*这样表示分别设定10px水平边框的边距和30px垂直边框间距*/
+  border-collapse: collapse;/*使边框之间没有间距，效果等同border-spacing: 0px;*/
+}
+
+td, th {
+  border: thin solid gray;
+  padding: 5px;
+}
+
+th {
+  background-color: #c60;
+}
+
+caption {
+  font-style: italic;
+  padding-top: 8px;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.cellColor {/*指定颜色*/
+  background-color: #fcba7a;
+}
+/*高级做法：*/
+/*使用nth-child伪类指定间隔行颜色*/
+/*
+tr:nth-child(2n+1) {
+  background-color: #fcba7a;
+}
+*/
+table table th {/*选择嵌套在表格中的表格的表头*/
+  background-color: white;
+}/*可以使用类，ID来指定这个th，但如果使用子孙选择器，我们就不用对html文件进行任何修改*/
+
+table table tr:nth-child(2n+1) {
+  background-color: blue;
+}
+table table tr:nth-child(2n) {
+  background-color: pink;
+}
+
+li {
+  list-style-type: circle;/*列表样式，只要就是这个，可选的有disc,circle,square,none*/
+  list-style-image: url(images/backpack.gif);/*如果不喜欢系统提供的标记，可以自己定制一个标记图像*/
+  padding-top: 5px;
+  margin-left: 20px;
+  list-style-position: outside;
+}
