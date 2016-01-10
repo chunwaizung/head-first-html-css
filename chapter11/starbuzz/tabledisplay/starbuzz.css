@@ -31,7 +31,7 @@ body {
 #drinks {
   display: table-cell;
   background: #efe5d0;
-  width: 20%;/*宽度为*/
+  width: 20%;/*宽度为页面的20%*/
   padding: 15px;
   vertical-align: top;
 }
